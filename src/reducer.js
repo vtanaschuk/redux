@@ -1,4 +1,8 @@
-const initialState = { value: 0 };
+const initialState = {
+    value: 0,
+    foo: 'bar',
+    name: 'Jack'
+};
 
 const reducer = (state= initialState, action) =>{
     if (action.type === 'INC'){
