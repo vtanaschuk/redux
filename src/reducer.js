@@ -1,26 +1,24 @@
 const initialState = {
-    value: 0,
-    foo: 'bar',
-    name: 'Jack'
+    counter: 10
 };
 
 const reducer = (state= initialState, action) =>{
     if (action.type === 'INC'){
         return {
             ...state,
-            value: state.value + 1
+            counter: state.counter + 1
         }
     }
     if (action.type === 'DEC'){
         return {
             ...state,
-            value: state.value - 1
+            counter: state.counter - 1
         }
     }
     if (action.type === 'RND'){
         return {
             ...state,
-            value: state.value * action.payload
+            counter: state.counter * action.payload
         }
     }
     return state;
